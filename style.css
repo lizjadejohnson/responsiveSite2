@@ -1,0 +1,139 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 20px;
+  padding: 3%;
+  border: solid black;
+}
+
+.navLeft,
+.navRight {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.navLogo {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* PARENT HERO GRID */
+.heroGrid {
+  display: flex;
+  height: 500px;
+  border: solid black;
+}
+
+/* HERO LEFT SIDE */
+.heroLeft {
+  background-color: rgb(187, 205, 255);
+  width: 50%; /* Takes up half total width */
+  height: 100%; /* Takes up 100% total height */
+}
+
+/* Hero Top Left (25% total) */
+.heroTopLeft {
+  width: 100%; /* Takes up 50% total width */
+  height: 50%; /* Takes up 50% total height */
+  background-color: aliceblue;
+  /* Your styling for hero top left */
+}
+
+/* Hero Bottom Left (25% total) */
+
+.herobottomLeft {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Takes up 50% total width */
+  height: 50%; /* Takes up 50% total height */
+  background-color: bisque;
+}
+
+.herobottomleft1,
+.herobottomleft2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 50%; /* Takes up half the bottom left */
+  height: 100%;
+  background-color: rgb(206, 154, 255);
+}
+
+.herobottomleft2 {
+  background-color: rgb(255, 230, 168);
+}
+
+.herobottomleft2Btn,
+.herobottomleft1Btn {
+  padding: 8%;
+  border: solid salmon;
+}
+
+/* Hero RIGHT SIDE (50% width, full height) */
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: aquamarine;
+  width: 50%; /* Takes up half width */
+  height: 100%;
+}
+
+.heroRightBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.heroRightBtn1,
+.heroRightBtn2 {
+  border: solid black;
+  width: 50%;
+  padding: 4%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ddd;
+}
+
+main {
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---DEESKTOP--- */
+
+@media (min-width: 781px) {
+}
+
+/* ---TABLET--- */
+
+@media (max-width: 780px) {
+}
+
+/* ---MOBILE--- */
+
+@media (max-width: 480px) {
+}
