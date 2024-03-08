@@ -64,23 +64,31 @@
 
 body,
 html {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(220, 255, 255);
+}
+
+header {
+  padding: 2% 2% 0% 2%;
+  background-color: white;
 }
 
 nav {
   background-color: rgb(220, 255, 255);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 10vh;
-  max-width: 100%;
-  margin: 20px 20px 0px 20px;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
   border-radius: 10px 10px 10px 10px;
   border: 3px solid #000000;
-  padding-left: 15%;
-  padding-right: 15%;
 }
 
 .navLeft,
@@ -88,20 +96,28 @@ nav {
   display: flex;
   justify-content: center;
   gap: 20%;
+  width: 33%;
 }
 
 .navLogo {
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 2em;
+  width: 33%;
 }
 
 /* PARENT HERO GRID */
+
 .heroGrid {
   display: flex;
+  justify-content: center;
   height: 80vh;
   max-width: 100vw;
-  padding-top: 0%;
+  padding: 2% 1.75% 2% 1.75%;
+  background-color: white;
 }
 
 /* HERO LEFT SIDE */
@@ -116,7 +132,7 @@ nav {
 
 /* Hero Top Left (25% total) */
 .heroTopLeft {
-  width: 99%; /* Takes up 50% total width */
+  width: 100%; /* Takes up 50% total width */
   height: 49%; /* Takes up 50% total height */
   background-color: aliceblue;
   border-radius: 10px 10px 10px 10px;
@@ -266,11 +282,31 @@ nav {
 }
 
 .heroRightMainContent {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  overflow: hidden;
   height: 90%;
   width: 100%;
+}
+
+/* Make carousel take up the full width and height of  heroRightMainContent*/
+.carousel,
+.slide,
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Adjust .carousel-item img to cover the area (without stretching) */
+.carousel-item img {
+  width: 101%;
+  height: 101%;
+  border-radius: 7px 7px 0px 0px;
+  object-fit: cover; /* Cover the area, might crop images */
 }
 
 .heroRightBtns {
@@ -309,57 +345,79 @@ nav {
   background-color: #ffaeaed4;
 }
 
-main {
-  padding: 20px;
-}
-
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #e8fdff;
+  height: 5%;
 }
 
-/* ---DEESKTOP--- */
+/* ---DESKTOP--- */
 
-@media (min-width: 781px) {
+@media (max-width: 1200px) {
 }
 
 /* ---TABLET--- */
 
-@media (max-width: 780px) {
+@media (max-width: 992px) {
   #catgif {
     height: 55%;
   }
   #yarnicon {
     height: 20%;
   }
+  #doggif {
+    height: 50%;
+  }
+
+  .carousel-item img {
+    width: 101%;
+    height: 101%;
+    overflow: hidden;
+  }
 }
 
 /* ---MOBILE--- */
 
-@media (max-width: 580px) {
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .nav {
+    height: 10%;
+  }
+
+  .leftspacer,
+  .rightspacer,
+  .blspacer {
+    display: none;
+  }
   .heroGrid {
     flex-direction: column;
+    height: 80%;
   }
   .heroLeft {
+    height: 20vh;
     width: 100%; /* Now Takes up full total width */
+    margin-bottom: 2%;
   }
 
   .heroTopLeft {
     width: 100%; /* Now Takes up full total width */
-    height: 100%; /* Now Takes up full total height */
+    height: 20vh; /* Now Takes up full total height */
   }
 
   .heroRight {
     width: 100%; /* Now Takes up full total width */
+    height: 60vh;
   }
 
   .herobottomLeft {
     display: none; /* Hides the other left hand items */
   }
+  footer {
+    text-align: center;
+    height: 2vh;
+  }
 }
-
-/* * {
-  border: none !important;
-  border-radius: 0px 0px 0px 0px !important;
-} */
