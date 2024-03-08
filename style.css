@@ -109,6 +109,22 @@ nav {
   width: 33%;
 }
 
+.navLeft a,
+.navRight a,
+.navLogo a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navLeft a:hover,
+.navRight a:hover,
+.navLogo a:hover {
+  color: #000000;
+  text-shadow: 5px 5px 10px rgba(255, 236, 64, 0.559);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 /* PARENT HERO GRID */
 
 .heroGrid {
@@ -417,7 +433,6 @@ footer {
     display: none; /* Hides the other left hand items */
   }
   footer {
-    text-align: center;
     height: 2vh;
   }
 }
