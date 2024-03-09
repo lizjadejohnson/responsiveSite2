@@ -118,11 +118,46 @@ nav {
 
 .navLeft a:hover,
 .navRight a:hover,
-.navLogo a:hover {
+.navLogo a:hover,
+#accountBtn:hover {
   color: #000000;
   text-shadow: 5px 5px 10px rgba(255, 236, 64, 0.559);
   text-decoration: none;
   font-weight: bolder;
+  background-color: inherit;
+}
+
+#createAcctLink {
+  color: #000000;
+  text-shadow: none;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#accountBtn {
+  background-color: inherit;
+  border: none;
+  color: #000000;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.btn-primary {
+  background-color: rgb(255, 199, 213);
+  border-color: rgb(190, 190, 190);
+}
+
+.btn-primary:hover {
+  background-color: rgb(255, 147, 174);
+  border-color: rgb(190, 190, 190);
+}
+
+.modal-content {
+  background-color: aliceblue;
+}
+
+.modal-content .form-control {
+  background-color: rgb(255, 236, 229);
 }
 
 /* PARENT HERO GRID */
