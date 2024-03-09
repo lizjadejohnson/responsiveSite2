@@ -174,6 +174,8 @@ nav {
 
 .modal-content {
   background-color: aliceblue;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
 }
 
 .modal-content .form-control {
@@ -182,6 +184,18 @@ nav {
 
 .dropdown-menu {
   background-color: rgb(220, 255, 255);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.offcanvas-title {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: x-large;
+}
+.offcanvas-body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
 }
 
 /* PARENT HERO GRID */
@@ -484,9 +498,32 @@ nav {
   animation: twinkle 5s ease-in-out 1s infinite both;
 }
 
+/* ----- FAQ PAGE ----- */
+
+.faqContainer {
+  max-width: 100vw;
+  padding: 2% 1.75% 2% 1.75%;
+  background-color: white;
+  min-height: 80vh;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: large;
+}
+
+.faqTitle {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 2%;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 2em;
+}
+
 footer {
   text-align: center;
   height: 5%;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
 }
 
 /* ---DESKTOP--- */
