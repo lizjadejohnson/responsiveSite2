@@ -510,7 +510,8 @@ nav {
   font-size: large;
 }
 
-.faqTitle {
+.faqTitle,
+.compGridTitle {
   text-align: center;
   margin: auto;
   padding-bottom: 2%;
