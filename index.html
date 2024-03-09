@@ -35,9 +35,25 @@
       <nav>
         <div class="navLeft">
           <a href="#" class="material-symbols-outlined">storefront </a>
-          <a href="#" class="material-symbols-outlined">question_exchange</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="material-symbols-outlined"
+              id="customDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              question_exchange
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="customDropdown">
+              <li><a class="dropdown-item" href="./about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="#">FAQ</a></li>
+              <!-- Link to your new About Us page -->
+            </ul>
+          </div>
         </div>
-        <div class="navLogo"><a href="#">chibi</a></div>
+        <div class="navLogo"><a href="./index.html">chibi</a></div>
         <div class="navRight">
           <!-- Modal -->
           <div
@@ -226,7 +242,41 @@
             account_circle
           </button>
 
-          <a href="#" class="material-symbols-outlined">shopping_bag</a>
+          <!-- <a href="#" class="material-symbols-outlined">shopping_bag</a> -->
+
+          <button
+            class="btn btn-primary material-symbols-outlined"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+            id="shoppingIcon"
+          >
+            shopping_bag
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                Cart
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>Your cart is currently empty.</p>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
