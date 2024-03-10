@@ -500,7 +500,8 @@ nav {
 
 /* ----- FAQ PAGE ----- */
 
-.faqContainer {
+.faqContainer,
+.shopContainer {
   max-width: 100vw;
   padding: 2% 1.75% 2% 1.75%;
   background-color: white;
@@ -510,8 +511,51 @@ nav {
   font-size: large;
 }
 
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopCarousel {
+  width: 90vw;
+  background-color: white;
+  height: 50vh;
+  border-radius: 10px 10px 10px 10px;
+  border: 3px solid #000000;
+  overflow: hidden;
+}
+
+.shopItems {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 90%;
+  padding-top: 2%;
+  gap: 2%;
+}
+
+.shopItems .card {
+  flex: 1;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  height: 30vh;
+}
+
+.card-img-top {
+  height: 80%; /*Make shop item imgs take up 50/50 space */
+  object-fit: cover;
+}
+
 .faqTitle,
-.compGridTitle {
+.compGridTitle,
+.shopTitle {
   text-align: center;
   margin: auto;
   padding-bottom: 2%;
@@ -552,7 +596,7 @@ footer {
   body {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;
   }
 
   .nav {
@@ -566,7 +610,7 @@ footer {
   }
   .heroGrid {
     flex-direction: column;
-    height: 80%;
+    height: auto;
   }
   .heroLeft {
     height: 20vh;
@@ -587,6 +631,22 @@ footer {
   .herobottomLeft {
     display: none; /* Hides the other left hand items */
   }
+
+  .shopItems {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items for consistency */
+    justify-content: flex-start; /* Align to start if necessary */
+  }
+
+  .shopItems .card {
+    width: 90%; /* Adjust card width for mobile viewing */
+    margin-bottom: 2%; /* Add some space between cards */
+  }
+  .shopItems .card .card-img-top {
+    min-height: 30vh; /* Set a minimum height for all images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+
   footer {
     height: 10%;
   }
